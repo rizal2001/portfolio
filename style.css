@@ -1026,6 +1026,30 @@ button.new-button:checked {
     box-shadow: 0 0 20px #6d6d6d;
 }
 
+.sosmed-contact a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    border: 2px solid #0ef;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #0ef;
+    text-decoration: none;
+    margin: 20px 10px 10px 0;
+    transition: .5s ease;
+    opacity: 0;
+    animation: slideButtom 1s ease forwards;
+}
+
+.sosmed-contact a:hover {
+    background-color: #0ef;
+    color: #292929;
+    box-shadow: 0 0 20px #0ef;
+}
+
 
 /* End Contact */
 
