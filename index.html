@@ -1,780 +1,1460 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE-edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE-edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio - Rizal Setiawan</title>
-    <link rel="shortcut icon" href="images/logo.jpg">
+    <link rel="shortcut icon" href="images/logo.jpg" />
 
     <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
     <!-- fontawesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
     <!-- jquery -->
-    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.3.min.js"
+      integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+      crossorigin="anonymous"
+    ></script>
     <!-- Typing -->
     <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
     <!-- Pop Up -->
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
     <!-- JS -->
     <script src="script.js"></script>
     <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-</head>
-
-<body>
+  <body>
     <header>
-        <!-- navbar -->
-        <div class="container-fluid">
-            <div class="row" id="home">
-                <nav class="navbar navbar-expand-md text-uppercase bg-transparent" id="mainNav">
-                    <div class="col-1 mt-2">
-                        <a class="logo text-center text-decoration-none text-light" href="">
-                            <h2>RS</h2>
-                        </a>
-                    </div>
-                    <div class="col-2 col-md-1 col-lg-1 col-xl-4 menu-responsive">
-                        <button class="navbar-toggler text-uppercase font-weight-bold rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                            <i id="list" class="fas fa-bars text-light" onclick="onClickList()"></i>
-                            <i id="close" class="fas fa-close text-light d-none" onclick="onClickClose()"></i>
-                        </button>
-                    </div>
-                    <div class="col-12 col-md-10 text-center">
-                        <div class="collapse navbar-collapse justify-content-center" id="navbarResponsive">
-                            <ul class="navbar-nav text-center">
-                                <li class="nav-item mx-0 mx-lg-1">
-                                    <a class="nav-link py-3 menu rounded active" id="scrollHome" href="#home">Home</a>
-                                </li>
-                                <li class="nav-item mx-0 mx-lg-1">
-                                    <a class="nav-link py-3 about rounded" id="scrollAbout" href="#about">About</a>
-                                </li>
-                                <li class="nav-item mx-0 mx-lg-1">
-                                    <a class="nav-link py-3 skills rounded" id="scrollSkills" href="#skills">Skills</a>
-                                </li>
-                                <li class="nav-item mx-0 mx-lg-1">
-                                    <a class="nav-link py-3 certificate rounded" id="scrollCertificate" href="#certificate">Certificate</a>
-                                </li>
-                                <li class="nav-item mx-0 mx-lg-1">
-                                    <a class="nav-link py-3 portfolio rounded" id="scrollPortfolio" href="#portfolio">Portfolio</a>
-                                </li>
-                                <li class="nav-item mx-0 mx-lg-1">
-                                    <a class="nav-link py-3 contact rounded" id="scrollContact" href="#contact">Contact</a>
-                                </li>
-                                <div class="text-center icon-github-responsive" id="navbarResponsive">
-                                    <a href="https://github.com/rizal2001" style="color: #fff; font-size: 35px;" target="_blank"><i class="fa fa-github"></i></a>
-                                </div>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-1 col-xl-1 icon-github">
-                        <a href="https://github.com/rizal2001" style="color: #fff; font-size: 35px;" target="_blank"><i class="fa fa-github"></i></a>
-                    </div>
-
-                </nav>
+      <!-- navbar -->
+      <div class="container-fluid">
+        <div class="row" id="home">
+          <nav
+            class="navbar navbar-expand-md text-uppercase bg-transparent"
+            id="mainNav"
+          >
+            <div class="col-1 mt-2">
+              <a
+                class="logo text-center text-decoration-none text-light"
+                href=""
+              >
+                <h2>RS</h2>
+              </a>
             </div>
+            <div class="col-2 col-md-1 col-lg-1 col-xl-4 menu-responsive">
+              <button
+                class="navbar-toggler text-uppercase font-weight-bold rounded"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarResponsive"
+                aria-controls="navbarResponsive"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <i
+                  id="list"
+                  class="fas fa-bars text-light"
+                  onclick="onClickList()"
+                ></i>
+                <i
+                  id="close"
+                  class="fas fa-close text-light d-none"
+                  onclick="onClickClose()"
+                ></i>
+              </button>
+            </div>
+            <div class="col-12 col-md-10 text-center">
+              <div
+                class="collapse navbar-collapse justify-content-center"
+                id="navbarResponsive"
+              >
+                <ul class="navbar-nav text-center">
+                  <li class="nav-item mx-0 mx-lg-1">
+                    <a
+                      class="nav-link py-3 menu rounded active"
+                      id="scrollHome"
+                      href="#home"
+                      >Home</a
+                    >
+                  </li>
+                  <li class="nav-item mx-0 mx-lg-1">
+                    <a
+                      class="nav-link py-3 about rounded"
+                      id="scrollAbout"
+                      href="#about"
+                      >About</a
+                    >
+                  </li>
+                  <li class="nav-item mx-0 mx-lg-1">
+                    <a
+                      class="nav-link py-3 skills rounded"
+                      id="scrollSkills"
+                      href="#skills"
+                      >Skills</a
+                    >
+                  </li>
+                  <li class="nav-item mx-0 mx-lg-1">
+                    <a
+                      class="nav-link py-3 certificate rounded"
+                      id="scrollCertificate"
+                      href="#certificate"
+                      >Certificate</a
+                    >
+                  </li>
+                  <li class="nav-item mx-0 mx-lg-1">
+                    <a
+                      class="nav-link py-3 portfolio rounded"
+                      id="scrollPortfolio"
+                      href="#portfolio"
+                      >Portfolio</a
+                    >
+                  </li>
+                  <li class="nav-item mx-0 mx-lg-1">
+                    <a
+                      class="nav-link py-3 experience rounded"
+                      id="scrollExperience"
+                      href="#experience"
+                      >Experience</a
+                    >
+                  </li>
+                  <li class="nav-item mx-0 mx-lg-1">
+                    <a
+                      class="nav-link py-3 contact rounded"
+                      id="scrollContact"
+                      href="#contact"
+                      >Contact</a
+                    >
+                  </li>
+                  <div
+                    class="text-center icon-github-responsive"
+                    id="navbarResponsive"
+                  >
+                    <a
+                      href="https://github.com/rizal2001"
+                      style="color: #fff; font-size: 35px"
+                      target="_blank"
+                      ><i class="fa fa-github"></i
+                    ></a>
+                  </div>
+                </ul>
+              </div>
+            </div>
+            <div class="col-12 col-md-1 col-xl-1 icon-github">
+              <a
+                href="https://github.com/rizal2001"
+                style="color: #fff; font-size: 35px"
+                target="_blank"
+                ><i class="fa fa-github"></i
+              ></a>
+            </div>
+          </nav>
         </div>
+      </div>
 
-        <div class="container">
-            <!-- home -->
-            <div class="row content-home">
-                <div class="col-12 col-md-5 col-xl-6">
-                    <div class="content-home text-light mt-5">
-                        <p>Hello World, I'm</p>
-                        <h1>Rizal Setiawan</h1>
-                        <h2 id="typing"></h2>
-                        <p class="mt-3 text-light">Welcome to My personal Website<span class="wave">👋🏼</span></p>
-                    </div>
-                    <div class="sosmed-fix">
-                        <div class="sosmed">
-                            <a href="https://wa.me/+6282130924083?text=Hallo Rizal Setiawan" target="_blank"><i class='bx bxl-whatsapp'></i></a>
-                            <a href="https://www.instagram.com/rizalsetiawan28" target="_blank"><i class='bx bxl-instagram'></i></a>
-                            <a href="https://www.facebook.com/rizalsetiawan55" target="_blank"><i class="bx bxl-facebook"></i></a>
-                            <a href="https://www.linkedin.com/in/rizal-setiawan-b71656172?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank"><i class="bx bxl-linkedin"></i></a>
-                        </div>
-                        <a href="cv/CV.pdf" class="cv mt-4" target="_blank">Download CV</a>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 text-center mt-2">
-                    <img src="images/profil.jpg" class="rounded-circle profil" width="400px" height="400px">
-                    <div class="sosmed-responsive">
-                        <div class="sosmedd mt-4">
-                            <a href="https://wa.me/+6282130924083?text=Hallo Rizal Setiawan" target="_blank"><i class='bx bxl-whatsapp'></i></a>
-                            <a href="https://www.instagram.com/rizalsetiawan28" target="_blank"><i class='bx bxl-instagram'></i></a>
-                            <a href="https://www.facebook.com/rizalsetiawan55" target="_blank"><i class="bx bxl-facebook"></i></a>
-                            <a href="https://www.linkedin.com/in/rizal-setiawan-b71656172?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank"><i class="bx bxl-linkedin"></i></a>
-                        </div>
-                        <a href="cv/CV.pdf" class="cv mt-4" target="_blank">Download CV</a>
-                    </div>
-                </div>
+      <div class="container">
+        <!-- home -->
+        <div class="row content-home">
+          <div class="col-12 col-md-5 col-xl-6">
+            <div class="content-home text-light mt-5">
+              <p>Hello World, I'm</p>
+              <h1>Rizal Setiawan</h1>
+              <h2 id="typing"></h2>
+              <p class="mt-3 text-light">
+                Welcome to My personal Website<span class="wave">👋🏼</span>
+              </p>
             </div>
-            <!-- end home -->
+            <div class="sosmed-fix">
+              <div class="sosmed">
+                <a
+                  href="https://wa.me/+6282130924083?text=Hallo Rizal Setiawan"
+                  target="_blank"
+                  ><i class="bx bxl-whatsapp"></i
+                ></a>
+                <a
+                  href="https://www.instagram.com/rizalsetiawan28"
+                  target="_blank"
+                  ><i class="bx bxl-instagram"></i
+                ></a>
+                <a
+                  href="https://www.facebook.com/rizalsetiawan55"
+                  target="_blank"
+                  ><i class="bx bxl-facebook"></i
+                ></a>
+                <a
+                  href="https://www.linkedin.com/in/rizal-setiawan-b71656172?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+                  target="_blank"
+                  ><i class="bx bxl-linkedin"></i
+                ></a>
+              </div>
+              <a href="cv/CV.pdf" class="cv mt-4" target="_blank"
+                >Download CV</a
+              >
+            </div>
+          </div>
+          <div class="col-12 col-md-6 text-center mt-2">
+            <img
+              src="images/profil.jpg"
+              class="rounded-circle profil"
+              width="400px"
+              height="400px"
+            />
+            <div class="sosmed-responsive">
+              <div class="sosmedd mt-4">
+                <a
+                  href="https://wa.me/+6282130924083?text=Hallo Rizal Setiawan"
+                  target="_blank"
+                  ><i class="bx bxl-whatsapp"></i
+                ></a>
+                <a
+                  href="https://www.instagram.com/rizalsetiawan28"
+                  target="_blank"
+                  ><i class="bx bxl-instagram"></i
+                ></a>
+                <a
+                  href="https://www.facebook.com/rizalsetiawan55"
+                  target="_blank"
+                  ><i class="bx bxl-facebook"></i
+                ></a>
+                <a
+                  href="https://www.linkedin.com/in/rizal-setiawan-b71656172?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+                  target="_blank"
+                  ><i class="bx bxl-linkedin"></i
+                ></a>
+              </div>
+              <a href="cv/CV.pdf" class="cv mt-4" target="_blank"
+                >Download CV</a
+              >
+            </div>
+          </div>
+        </div>
+        <!-- end home -->
 
-            <!-- about -->
-            <div class="row" id="about">
-                <div class="content-about rounded text-light">
-                    <div class="row">
-                        <div class="col-12 text-center mt-4 ">
-                            <h1>ABOUT</h1>
-                            <hr/>
-                        </div>
-                    </div>
+        <!-- about -->
+        <div class="row" id="about">
+          <div class="content-about rounded text-light">
+            <div class="row">
+              <div class="col-12 text-center mt-4">
+                <h1>ABOUT</h1>
+                <hr />
+              </div>
+            </div>
 
-                    <div class="row mt-5">
-                        <div class="col-12 col-xl-6 text-center">
-                            <img src="images/profil.jpg" class="rounded-circle profil" width="370px" height="370px">
-                        </div>
-                        <div class="col-12 col-xl-6 mt-4">
-                            <p> Hi everyone! My name is Rizal Setiawan. I'm a web developer from Bandung, West Java. I have 1 year of experience in front-end web development and now I am just studying and working as a QA Engineer. I really enjoy what I am
-                                doing at the moment, in my opinion making programs is not just a job, but also an art that has aesthetic value and can be my hobby because when I make a successful program I feel proud and happy about the program I made.
-                            </p>
-                            <p>My job is to build your website to be functional and user-friendly yet still attractive. In addition, I provide a personal touch to your product and ensure that the website catches attention and is easy to use. My goal is to
-                                convey your message and identity in the most creative way. If you are interested in hiring me, please contact the listed contact.</p>
-                        </div>
-                    </div>
-                </div>
+            <div class="row mt-5">
+              <div class="col-12 col-xl-6 text-center">
+                <img
+                  src="images/profil.jpg"
+                  class="rounded-circle profil"
+                  width="370px"
+                  height="370px"
+                />
+              </div>
+              <div class="col-12 col-xl-6 mt-4">
+                <p>
+                  Hi everybody! My name is Rizal Setiawan. I am a web developer
+                  from Bandung, West Java. I graduated with a Bachelor of
+                  Information Engineering at Nurtanio University Bandung in
+                  2023. I have more than 1 year of experience in Front-End Web
+                  Development and now I am just studying and working as a QA
+                  Engineer and Front-End Web Development. I really enjoy what I
+                  am what I'm doing now, in my opinion, making programs is not
+                  just a job, but also an art that has aesthetic value and can
+                  become my hobby because when I make a successful program I
+                  feel proud and happy with the program I made.
+                </p>
+                <p>
+                  My job is to build your website to be functional and
+                  user-friendly yet still attractive. In addition, I provide a
+                  personal touch to your product and ensure that the website
+                  catches attention and is easy to use. My goal is to convey
+                  your message and identity in the most creative way. If you are
+                  interested in hiring me, please contact the listed contact.
+                </p>
+              </div>
             </div>
-            <!-- end about -->
+          </div>
+        </div>
+        <!-- end about -->
 
-            <!-- skills -->
-            <div class="row" id="skills">
-                <div class="col-12">
-                    <div class="content-skills text-center text-light">
-                        <h2>SKIILS</h2>
-                        <hr class="mx-auto" />
-                    </div>
-                </div>
+        <!-- skills -->
+        <div class="row" id="skills">
+          <div class="col-12">
+            <div class="content-skills text-center text-light">
+              <h2>SKIILS</h2>
+              <hr class="mx-auto" />
             </div>
-            <div class="row justify-content-center text-center btn-skills mt-4">
-                <div class="col-6 col-md-3 col-xl-2">
-                    <button class="btn-skills-active" style="--clr:#0FF0FC" onclick="onClickCoding()" id="btn-skills-1"><span>Coding</span><i></i></button>
+          </div>
+        </div>
+        <div class="row justify-content-center text-center btn-skills mt-4">
+          <div class="col-6 col-md-3 col-xl-2">
+            <button
+              class="btn-skills-active"
+              style="--clr: #0ff0fc"
+              onclick="onClickCoding()"
+              id="btn-skills-1"
+            >
+              <span>Coding</span><i></i>
+            </button>
+          </div>
+          <div class="col-6 col-md-3 col-xl-2">
+            <button
+              style="--clr: #0ff0fc"
+              onclick="onClickDesign()"
+              id="btn-skills-2"
+            >
+              <span>Design</span><i></i>
+            </button>
+          </div>
+          <div class="col-6 col-md-3 col-xl-2">
+            <button
+              style="--clr: #0ff0fc"
+              onclick="onClickTools()"
+              id="btn-skills-3"
+            >
+              <span>Tools</span><i></i>
+            </button>
+          </div>
+          <div class="col-6 col-md-3 col-xl-2">
+            <button
+              style="--clr: #0ff0fc"
+              onclick="onClickMicrosoft()"
+              id="btn-skills-4"
+            >
+              <span>Microsoft</span><i></i>
+            </button>
+          </div>
+        </div>
+        <!-- coding -->
+        <div class="row mt-5" id="coding">
+          <div class="col-12 col-sm-6 col-xl-3">
+            <div class="card-skill">
+              <div class="card">
+                <div class="imgBx">
+                  <img src="images/html.png" />
                 </div>
-                <div class="col-6 col-md-3 col-xl-2">
-                    <button style="--clr:#0FF0FC" onclick="onClickDesign()" id="btn-skills-2"><span>Design</span><i></i></button>
+                <div class="contentBx">
+                  <h2>HTML</h2>
+                  <div class="size">
+                    <h3>Type :</h3>
+                    <span>Markup Language</span>
+                  </div>
+                  <div class="color">
+                    <h3>Ability :</h3>
+                    <span>Advanced</span>
+                  </div>
                 </div>
-                <div class="col-6 col-md-3 col-xl-2">
-                    <button style="--clr:#0FF0FC" onclick="onClickTools()" id="btn-skills-3"><span>Tools</span><i></i></button>
-                </div>
-                <div class="col-6 col-md-3 col-xl-2">
-                    <button style="--clr:#0FF0FC" onclick="onClickMicrosoft()" id="btn-skills-4"><span>Microsoft</span><i></i></button>
-                </div>
+              </div>
             </div>
-            <!-- coding -->
-            <div class="row mt-5" id="coding">
-                <div class="col-12 col-sm-6 col-xl-3">
-                    <div class="card-skill">
-                        <div class="card">
-                            <div class="imgBx">
-                                <img src="images/html.png">
-                            </div>
-                            <div class="contentBx">
-                                <h2>HTML</h2>
-                                <div class="size">
-                                    <h3>Type :</h3>
-                                    <span>Markup Language</span>
-                                </div>
-                                <div class="color">
-                                    <h3>Ability :</h3>
-                                    <span>Advanced</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+          </div>
+          <div class="col-12 col-sm-6 col-xl-3">
+            <div class="card-skill">
+              <div class="card">
+                <div class="imgBx">
+                  <img src="images/css.png" />
                 </div>
-                <div class="col-12 col-sm-6 col-xl-3">
-                    <div class="card-skill">
-                        <div class="card">
-                            <div class="imgBx">
-                                <img src="images/css.png">
-                            </div>
-                            <div class="contentBx">
-                                <h2>CSS</h2>
-                                <div class="size">
-                                    <h3>Type :</h3>
-                                    <span>Markup Language</span>
-                                </div>
-                                <div class="color">
-                                    <h3>Ability :</h3>
-                                    <span>Advanced</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="contentBx">
+                  <h2>CSS</h2>
+                  <div class="size">
+                    <h3>Type :</h3>
+                    <span>Markup Language</span>
+                  </div>
+                  <div class="color">
+                    <h3>Ability :</h3>
+                    <span>Advanced</span>
+                  </div>
                 </div>
-                <div class="col-12 col-sm-6 col-xl-3">
-                    <div class="card-skill">
-                        <div class="card">
-                            <div class="imgBx">
-                                <img src="images/js.png">
-                            </div>
-                            <div class="contentBx">
-                                <h2>JavaScript</h2>
-                                <div class="size">
-                                    <h3>Type :</h3>
-                                    <span>Markup Language</span>
-                                </div>
-                                <div class="color">
-                                    <h3>Ability :</h3>
-                                    <span>Advanced</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-6 col-xl-3">
-                    <div class="card-skill">
-                        <div class="card">
-                            <div class="imgBx">
-                                <img src="images/php.png" style="left: 15%;">
-                            </div>
-                            <div class="contentBx">
-                                <h2>PHP</h2>
-                                <div class="size">
-                                    <h3>Type :</h3>
-                                    <span>Markup Language</span>
-                                </div>
-                                <div class="color">
-                                    <h3>Ability :</h3>
-                                    <span>Intermediate</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-6 col-xl-3">
-                    <div class="card-skill">
-                        <div class="card">
-                            <div class="imgBx">
-                                <img src="images/bootsrap.png">
-                            </div>
-                            <div class="contentBx">
-                                <h2>Bootstrap</h2>
-                                <div class="size">
-                                    <h3>Type :</h3>
-                                    <span>Library Framework</span>
-                                </div>
-                                <div class="color">
-                                    <h3>Ability :</h3>
-                                    <span>Advanced</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-6 col-xl-3">
-                    <div class="card-skill">
-                        <div class="card">
-                            <div class="imgBx">
-                                <img src="images/laravel.png">
-                            </div>
-                            <div class="contentBx">
-                                <h2>Laravel</h2>
-                                <div class="size">
-                                    <h3>Type :</h3>
-                                    <span>Framework PHP</span>
-                                </div>
-                                <div class="color">
-                                    <h3>Ability :</h3>
-                                    <span>Advanced</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-6 col-xl-3">
-                    <div class="card-skill">
-                        <div class="card">
-                            <div class="imgBx">
-                                <img src="images/react.png" style="left: 17%;">
-                            </div>
-                            <div class="contentBx">
-                                <h2>React JS</h2>
-                                <div class="size">
-                                    <h3>Type :</h3>
-                                    <span>Framework JS</span>
-                                </div>
-                                <div class="color">
-                                    <h3>Ability :</h3>
-                                    <span>Intermediate</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-6 col-xl-3">
-                    <div class="card-skill">
-                        <div class="card">
-                            <div class="imgBx">
-                                <img src="images/nextjs.png">
-                            </div>
-                            <div class="contentBx">
-                                <h2>Next JS</h2>
-                                <div class="size">
-                                    <h3>Type :</h3>
-                                    <span>Framework JS</span>
-                                </div>
-                                <div class="color">
-                                    <h3>Ability :</h3>
-                                    <span>Intermediate</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-6 col-xl-3">
-                    <div class="card-skill">
-                        <div class="card">
-                            <div class="imgBx">
-                                <img src="images/node.png">
-                            </div>
-                            <div class="contentBx">
-                                <h2>Node JS</h2>
-                                <div class="size">
-                                    <h3>Type :</h3>
-                                    <span>Framework JS</span>
-                                </div>
-                                <div class="color">
-                                    <h3>Ability :</h3>
-                                    <span>Intermediate</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-6 col-xl-3">
-                    <div class="card-skill">
-                        <div class="card">
-                            <div class="imgBx">
-                                <img src="images/django.png">
-                            </div>
-                            <div class="contentBx">
-                                <h2>Django</h2>
-                                <div class="size">
-                                    <h3>Type :</h3>
-                                    <span>Framework Python</span>
-                                </div>
-                                <div class="color">
-                                    <h3>Ability :</h3>
-                                    <span>Intermediate</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+              </div>
             </div>
-            <!-- design -->
-            <div class="row mt-5 d-none" id="design">
-                <div class="col-12 col-sm-6 col-xl-3">
-                    <div class="card-skill">
-                        <div class="card">
-                            <div class="imgBx">
-                                <img src="images/xd.png">
-                            </div>
-                            <div class="contentBx">
-                                <h2>Adobe XD</h2>
-                                <div class="size">
-                                    <h3>Type :</h3>
-                                    <span>UI/UX</span>
-                                </div>
-                                <div class="color">
-                                    <h3>Ability :</h3>
-                                    <span>Advanced</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+          </div>
+          <div class="col-12 col-sm-6 col-xl-3">
+            <div class="card-skill">
+              <div class="card">
+                <div class="imgBx">
+                  <img src="images/js.png" />
                 </div>
-                <div class="col-12 col-sm-6 col-xl-3">
-                    <div class="card-skill">
-                        <div class="card">
-                            <div class="imgBx">
-                                <img src="images/figma.png">
-                            </div>
-                            <div class="contentBx">
-                                <h2>Figma</h2>
-                                <div class="size">
-                                    <h3>Type :</h3>
-                                    <span>UI/UX</span>
-                                </div>
-                                <div class="color">
-                                    <h3>Ability :</h3>
-                                    <span>Advanced</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="contentBx">
+                  <h2>JavaScript</h2>
+                  <div class="size">
+                    <h3>Type :</h3>
+                    <span>Markup Language</span>
+                  </div>
+                  <div class="color">
+                    <h3>Ability :</h3>
+                    <span>Advanced</span>
+                  </div>
                 </div>
-                <div class="col-12 col-sm-6 col-xl-3">
-                    <div class="card-skill">
-                        <div class="card">
-                            <div class="imgBx">
-                                <img src="images/ps.png">
-                            </div>
-                            <div class="contentBx">
-                                <h2>Adobe Photoshop</h2>
-                                <div class="size">
-                                    <h3>Type :</h3>
-                                    <span>Editing</span>
-                                </div>
-                                <div class="color">
-                                    <h3>Ability :</h3>
-                                    <span>Advanced</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+              </div>
             </div>
-            <!-- tools -->
-            <div class="row mt-5 d-none" id="tools">
-                <div class="col-12 col-sm-6 col-xl-3">
-                    <div class="card-skill">
-                        <div class="card">
-                            <div class="imgBx">
-                                <img src="images/hub.png">
-                            </div>
-                            <div class="contentBx">
-                                <h2>GitHub</h2>
-                                <div class="size">
-                                    <h3>Type :</h3>
-                                    <span>Git Hosting</span>
-                                </div>
-                                <div class="color">
-                                    <h3>Ability :</h3>
-                                    <span>Advanced</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+          </div>
+          <div class="col-12 col-sm-6 col-xl-3">
+            <div class="card-skill">
+              <div class="card">
+                <div class="imgBx">
+                  <img src="images/php.png" style="left: 15%" />
                 </div>
-                <div class="col-12 col-sm-6 col-xl-3">
-                    <div class="card-skill">
-                        <div class="card">
-                            <div class="imgBx">
-                                <img src="images/lab.png">
-                            </div>
-                            <div class="contentBx">
-                                <h2>GitLab</h2>
-                                <div class="size">
-                                    <h3>Type :</h3>
-                                    <span>Manajer Repositori </span>
-                                </div>
-                                <div class="color">
-                                    <h3>Ability :</h3>
-                                    <span>Advanced</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="contentBx">
+                  <h2>PHP</h2>
+                  <div class="size">
+                    <h3>Type :</h3>
+                    <span>Markup Language</span>
+                  </div>
+                  <div class="color">
+                    <h3>Ability :</h3>
+                    <span>Intermediate</span>
+                  </div>
                 </div>
-                <div class="col-12 col-sm-6 col-xl-3">
-                    <div class="card-skill">
-                        <div class="card">
-                            <div class="imgBx">
-                                <img src="images/sql.png">
-                            </div>
-                            <div class="contentBx">
-                                <h2>MySQL</h2>
-                                <div class="size">
-                                    <h3>Type :</h3>
-                                    <span>Database</span>
-                                </div>
-                                <div class="color">
-                                    <h3>Ability :</h3>
-                                    <span>Advanced</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+              </div>
             </div>
-            <!-- microsoft -->
-            <div class="row mt-5 d-none" id="microsoft">
-                <div class="col-12 col-sm-6 col-xl-3">
-                    <div class="card-skill">
-                        <div class="card">
-                            <div class="imgBx">
-                                <img src="images/word.png">
-                            </div>
-                            <div class="contentBx">
-                                <h2>Microsoft Word</h2>
-                                <div class="size">
-                                    <h3>Type :</h3>
-                                    <span>Pengolah Kata</span>
-                                </div>
-                                <div class="color">
-                                    <h3>Ability :</h3>
-                                    <span>Advanced</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+          </div>
+          <div class="col-12 col-sm-6 col-xl-3">
+            <div class="card-skill">
+              <div class="card">
+                <div class="imgBx">
+                  <img src="images/bootsrap.png" />
                 </div>
-                <div class="col-12 col-sm-6 col-xl-3">
-                    <div class="card-skill">
-                        <div class="card">
-                            <div class="imgBx">
-                                <img src="images/excel.png">
-                            </div>
-                            <div class="contentBx">
-                                <h2>Microsoft Excel</h2>
-                                <div class="size">
-                                    <h3>Type :</h3>
-                                    <span>Pengolah Angka</span>
-                                </div>
-                                <div class="color">
-                                    <h3>Ability :</h3>
-                                    <span>Advanced</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="contentBx">
+                  <h2>Bootstrap</h2>
+                  <div class="size">
+                    <h3>Type :</h3>
+                    <span>Library Framework</span>
+                  </div>
+                  <div class="color">
+                    <h3>Ability :</h3>
+                    <span>Advanced</span>
+                  </div>
                 </div>
-                <div class="col-12 col-sm-6 col-xl-3">
-                    <div class="card-skill">
-                        <div class="card">
-                            <div class="imgBx">
-                                <img src="images/ppt.png">
-                            </div>
-                            <div class="contentBx">
-                                <h2>Microsoft Power Point</h2>
-                                <div class="size">
-                                    <h3>Type :</h3>
-                                    <span>Percentage</span>
-                                </div>
-                                <div class="color">
-                                    <h3>Ability :</h3>
-                                    <span>Advanced</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+              </div>
             </div>
-            <!-- end skills -->
+          </div>
+          <div class="col-12 col-sm-6 col-xl-3">
+            <div class="card-skill">
+              <div class="card">
+                <div class="imgBx">
+                  <img src="images/laravel.png" />
+                </div>
+                <div class="contentBx">
+                  <h2>Laravel</h2>
+                  <div class="size">
+                    <h3>Type :</h3>
+                    <span>Framework PHP</span>
+                  </div>
+                  <div class="color">
+                    <h3>Ability :</h3>
+                    <span>Advanced</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-xl-3">
+            <div class="card-skill">
+              <div class="card">
+                <div class="imgBx">
+                  <img src="images/react.png" style="left: 17%" />
+                </div>
+                <div class="contentBx">
+                  <h2>React JS</h2>
+                  <div class="size">
+                    <h3>Type :</h3>
+                    <span>Framework JS</span>
+                  </div>
+                  <div class="color">
+                    <h3>Ability :</h3>
+                    <span>Intermediate</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-xl-3">
+            <div class="card-skill">
+              <div class="card">
+                <div class="imgBx">
+                  <img src="images/nextjs.png" />
+                </div>
+                <div class="contentBx">
+                  <h2>Next.JS</h2>
+                  <div class="size">
+                    <h3>Type :</h3>
+                    <span>Framework JS</span>
+                  </div>
+                  <div class="color">
+                    <h3>Ability :</h3>
+                    <span>Advanced</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-xl-3">
+            <div class="card-skill">
+              <div class="card">
+                <div class="imgBx">
+                  <img src="images/node.png" />
+                </div>
+                <div class="contentBx">
+                  <h2>Node JS</h2>
+                  <div class="size">
+                    <h3>Type :</h3>
+                    <span>Framework JS</span>
+                  </div>
+                  <div class="color">
+                    <h3>Ability :</h3>
+                    <span>Intermediate</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-xl-3">
+            <div class="card-skill">
+              <div class="card">
+                <div class="imgBx">
+                  <img src="images/django.png" />
+                </div>
+                <div class="contentBx">
+                  <h2>Django</h2>
+                  <div class="size">
+                    <h3>Type :</h3>
+                    <span>Framework Python</span>
+                  </div>
+                  <div class="color">
+                    <h3>Ability :</h3>
+                    <span>Intermediate</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- design -->
+        <div class="row mt-5 d-none" id="design">
+          <div class="col-12 col-sm-6 col-xl-3">
+            <div class="card-skill">
+              <div class="card">
+                <div class="imgBx">
+                  <img src="images/xd.png" />
+                </div>
+                <div class="contentBx">
+                  <h2>Adobe XD</h2>
+                  <div class="size">
+                    <h3>Type :</h3>
+                    <span>UI/UX</span>
+                  </div>
+                  <div class="color">
+                    <h3>Ability :</h3>
+                    <span>Advanced</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-xl-3">
+            <div class="card-skill">
+              <div class="card">
+                <div class="imgBx">
+                  <img src="images/figma.png" />
+                </div>
+                <div class="contentBx">
+                  <h2>Figma</h2>
+                  <div class="size">
+                    <h3>Type :</h3>
+                    <span>UI/UX</span>
+                  </div>
+                  <div class="color">
+                    <h3>Ability :</h3>
+                    <span>Advanced</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-xl-3">
+            <div class="card-skill">
+              <div class="card">
+                <div class="imgBx">
+                  <img src="images/ps.png" />
+                </div>
+                <div class="contentBx">
+                  <h2>Adobe Photoshop</h2>
+                  <div class="size">
+                    <h3>Type :</h3>
+                    <span>Editing</span>
+                  </div>
+                  <div class="color">
+                    <h3>Ability :</h3>
+                    <span>Advanced</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- tools -->
+        <div class="row mt-5 d-none" id="tools">
+          <div class="col-12 col-sm-6 col-xl-3">
+            <div class="card-skill">
+              <div class="card">
+                <div class="imgBx">
+                  <img src="images/hub.png" />
+                </div>
+                <div class="contentBx">
+                  <h2>GitHub</h2>
+                  <div class="size">
+                    <h3>Type :</h3>
+                    <span>Git Hosting</span>
+                  </div>
+                  <div class="color">
+                    <h3>Ability :</h3>
+                    <span>Advanced</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-xl-3">
+            <div class="card-skill">
+              <div class="card">
+                <div class="imgBx">
+                  <img src="images/lab.png" />
+                </div>
+                <div class="contentBx">
+                  <h2>GitLab</h2>
+                  <div class="size">
+                    <h3>Type :</h3>
+                    <span>Manajer Repositori </span>
+                  </div>
+                  <div class="color">
+                    <h3>Ability :</h3>
+                    <span>Advanced</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-xl-3">
+            <div class="card-skill">
+              <div class="card">
+                <div class="imgBx">
+                  <img src="images/sql.png" />
+                </div>
+                <div class="contentBx">
+                  <h2>MySQL</h2>
+                  <div class="size">
+                    <h3>Type :</h3>
+                    <span>Database</span>
+                  </div>
+                  <div class="color">
+                    <h3>Ability :</h3>
+                    <span>Advanced</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- microsoft -->
+        <div class="row mt-5 d-none" id="microsoft">
+          <div class="col-12 col-sm-6 col-xl-3">
+            <div class="card-skill">
+              <div class="card">
+                <div class="imgBx">
+                  <img src="images/word.png" />
+                </div>
+                <div class="contentBx">
+                  <h2>Microsoft Word</h2>
+                  <div class="size">
+                    <h3>Type :</h3>
+                    <span>Pengolah Kata</span>
+                  </div>
+                  <div class="color">
+                    <h3>Ability :</h3>
+                    <span>Advanced</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-xl-3">
+            <div class="card-skill">
+              <div class="card">
+                <div class="imgBx">
+                  <img src="images/excel.png" />
+                </div>
+                <div class="contentBx">
+                  <h2>Microsoft Excel</h2>
+                  <div class="size">
+                    <h3>Type :</h3>
+                    <span>Pengolah Angka</span>
+                  </div>
+                  <div class="color">
+                    <h3>Ability :</h3>
+                    <span>Advanced</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-xl-3">
+            <div class="card-skill">
+              <div class="card">
+                <div class="imgBx">
+                  <img src="images/ppt.png" />
+                </div>
+                <div class="contentBx">
+                  <h2>Microsoft Power Point</h2>
+                  <div class="size">
+                    <h3>Type :</h3>
+                    <span>Percentage</span>
+                  </div>
+                  <div class="color">
+                    <h3>Ability :</h3>
+                    <span>Advanced</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end skills -->
 
-            <!-- certificate -->
-            <div class="row" id="certificate">
-                <div class="col-12">
-                    <div class="text-center text-light text-certificate">
-                        <h3 class="fw-bold">My Certificate</h3>
-                        <h5>Explore the certificates I've so far</h5>
-                    </div>
-                </div>
+        <!-- certificate -->
+        <div class="row" id="certificate">
+          <div class="col-12">
+            <div class="text-center text-light text-certificate">
+              <h3 class="fw-bold">My Certificate</h3>
+              <h5>Explore the certificates I've so far</h5>
             </div>
-            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                    <!-- <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button> -->
+          </div>
+        </div>
+        <div
+          id="carouselExampleIndicators"
+          class="carousel slide"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <!-- <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button> -->
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="row justify-content-center mt-4">
+                <div class="col-10 col-md-6 card-certificate">
+                  <div class="card">
+                    <img src="sertifikat/mos.png" />
+                    <span class="card__footer text-light">
+                      <span>Microsoft Office Specialist</span>
+                      <span>28 May 2023</span>
+                    </span>
+                    <span
+                      class="card__action text-light"
+                      data-bs-toggle="modal"
+                      data-bs-target="#certificate1"
+                    >
+                      <i class="fas fa-eye"></i>
+                    </span>
+                  </div>
                 </div>
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <div class="row justify-content-center mt-4">
-                            <div class="col-10 col-md-6 card-certificate">
-                                <div class="card">
-                                    <img src="sertifikat/mos.png">
-                                    <span class="card__footer text-light">
-                                        <span>Microsoft Office Specialist</span>
-                                    <span>28 May 2023</span>
-                                    </span>
-                                    <span class="card__action text-light">
-                                     <i class="fas fa-eye"></i>
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="col-10 col-md-6 card-certificate">
-                                <div class="card">
-                                    <img src="sertifikat/database.png">
-                                    <span class="card__footer text-light">
-                                        <span>Databases Specialist</span>
-                                    <span>11 June 2023</span>
-                                    </span>
-                                    <span class="card__action text-light" data-bs-toggle="modal" data-bs-target="#certificate2">
-                                     <i class="fas fa-eye"></i>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="row justify-content-center mt-4">
-                            <div class="col-10 col-md-6 card-certificate">
-                                <div class="card">
-                                    <img src="sertifikat/magang.png">
-                                    <span class="card__footer text-light">
-                                        <span>Apprenticeship</span>
-                                    <span>10 March 2023</span>
-                                    </span>
-                                    <span class="card__action text-light" data-bs-toggle="modal" data-bs-target="#certificate3">
-                                     <i class="fas fa-eye"></i>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- <div class="carousel-item">
+                <div class="col-10 col-md-6 card-certificate">
+                  <div class="card">
+                    <img src="sertifikat/database.png" />
+                    <span class="card__footer text-light">
+                      <span>Databases Specialist</span>
+                      <span>11 June 2023</span>
+                    </span>
+                    <span
+                      class="card__action text-light"
+                      data-bs-toggle="modal"
+                      data-bs-target="#certificate2"
+                    >
+                      <i class="fas fa-eye"></i>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="row justify-content-center mt-4">
+                <div class="col-10 col-md-6 card-certificate">
+                  <div class="card">
+                    <img src="sertifikat/magang.png" />
+                    <span class="card__footer text-light">
+                      <span>Apprenticeship at the company</span>
+                      <span>10 March 2023</span>
+                    </span>
+                    <span
+                      class="card__action text-light"
+                      data-bs-toggle="modal"
+                      data-bs-target="#certificate3"
+                    >
+                      <i class="fas fa-eye"></i>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- <div class="carousel-item">
                         <img class="d-block w-100" src="images/mos.png" alt="Third slide">
                     </div> -->
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Next</span>
-                </button>
-            </div>
-
-            <!-- modal certificate -->
-            <div class="modal fade" id="certificate1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered modal-lg">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Details Certificate</h5>
-                            <button type="button" class="btn-close-certificate" data-bs-dismiss="modal" aria-label="Close"><i class="fas fa-close"></i></button>
-                        </div>
-                        <div class="modal-body">
-                            <img src="sertifikat/mos.png" width="100%" height="100%">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="modal fade" id="certificate2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered modal-lg">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Details Certificate</h5>
-                            <button type="button" class="btn-close-certificate" data-bs-dismiss="modal" aria-label="Close"><i class="fas fa-close"></i></button>
-                        </div>
-                        <div class="modal-body">
-                            <img src="sertifikat/database.png" width="100%" height="100%">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="modal fade" id="certificate3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered modal-lg">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Details Certificate</h5>
-                            <button type="button" class="btn-close-certificate" data-bs-dismiss="modal" aria-label="Close"><i class="fas fa-close"></i></button>
-                        </div>
-                        <div class="modal-body">
-                            <img src="sertifikat/magang.png" width="100%" height="100%">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- end certificate -->
-
-            <!-- portfolio -->
-            <div class="row mt-4" id="portfolio">
-                <div class="col-12">
-                    <div class="text-center text-light text-portfolio">
-                        <h3 class="fw-bold">Past Project Experience</h3>
-                        <h5>Explore the projects I've worked on so far</h5>
-                    </div>
-                </div>
-                <div class="col-12 col-md-4 mt-4">
-                    <div class="card-portfolio text-light">
-                        <img src="portfolio/bmti.png" width="100%" height="200px">
-                        <div class="text-center fw-bold mt-3">
-                            <h5>BMTI Galeri Kejuruan</h5>
-                        </div>
-                        <p class="" id="text1">The BBPPMV BMTI Vocational Gallery Website Application System consists of developing a system to support...</p>
-                        <p class="d-none" id="text2">The BBPPMV BMTI Vocational Gallery Website Application System consists of developing a system to support the need for centralized learning media as well as a dashboard and homepage that can display existing learning and statistical
-                            data which provides complete and comprehensive information regarding learning activities. In order to support the convenience of stackholders in preparing plans for maintenance, development, construction, budgeting and supervision
-                            as well as participants and educational staff to make it easier to carry out training</p>
-                        <p class="bahasa">Laravel 9, Bootstrap</p>
-                        <button class="" data-bs-toggle="modal" onclick="onClickMore1()" id="more1">See More</button>
-                        <button class="d-none" data-bs-toggle="modal" onclick="onClickLess1()" id="less1">See Less</button>
-                        <div class="link-portfolio float-end mt-4">
-                            <a href="https://galeri.kejuruan.id/" class="text-decoration-none" target="_blank">
-                                <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="18" width="18" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                                    <polyline points="15 3 21 3 21 9"></polyline>
-                                    <line x1="10" y1="14" x2="21" y2="3"></line>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-4 mt-4">
-                    <div class="card-portfolio text-light">
-                        <img src="portfolio/bmti.png" width="100%" height="200px">
-                        <div class="text-center fw-bold mt-3">
-                            <h5>Mursmedic Jaya Mandiri</h5>
-                        </div>
-                        <p class="" id="text3">The realization of the MJM website application which is used to collect data and diagnosis results from tools...</p>
-                        <p class="d-none" id="text4">The realization of the MJM website application which is used to collect data and diagnosis results from tools that will later be used by doctors as a medium to make it easier to carry out or provide conclusions from the diagnosis
-                            results
-                        </p>
-                        <p class="bahasa">Django, Python</p>
-                        <button class="" data-bs-toggle="modal" onclick="onClickMore2()" id="more2">See More</button>
-                        <button class="d-none" data-bs-toggle="modal" onclick="onClickLess2()" id="less2">See Less</button>
-                        <div class="link-portfolio float-end mt-4">
-                            <a href="" class="text-decoration-none" target="_blank">
-                                <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                                </svg>
-                            </a>
-                            <a href="https://galeri.kejuruan.id/" class="text-decoration-none" target="_blank">
-                                <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="18" width="18" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                                    <polyline points="15 3 21 3 21 9"></polyline>
-                                    <line x1="10" y1="14" x2="21" y2="3"></line>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- end portfolio -->
-
-            <!-- contact -->
-            <div class="card content-contact mt-5">
-                <div class="row">
-                    <div class="col-6">
-                        <h3>Contact Us</h3>
-                        <form action="" class="mt-3">
-                            <label for="name" class="form-label">Full Name</label>
-                            <input type="text" class="form-control" id="nama" name="nama" required>
-                            <label for="e-mail" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="e-mail" name="e-mail" required>
-                            <label for="massage" class="form-label">Massage</label>
-                            <textarea class="form-control" name="massage" id="massage" rows="5" required></textarea>
-                            <div class="text-center mt-4">
-                                <button type="submit">Send</button>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="col-6">
-                        <iframe class="rounded" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d787.7892183919205!2d107.50373546949169!3d-6.906749168195211!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e515e1227c61%3A0x8b3d531e08c68440!2sJl.%20Babakan%20Pari%2C%20Batujajar%20Tim.%2C%20Kec.%20Batujajar%2C%20Kabupaten%20Bandung%20Barat%2C%20Jawa%20Barat%2040561!5e1!3m2!1sid!2sid!4v1697889785582!5m2!1sid!2sid"
-                            width="100%" height="85%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                        <div class="sosmed-contact text-center">
-                            <a href="https://wa.me/+6282130924083?text=Hallo Rizal Setiawan" target="_blank"><i class='bx bxl-whatsapp'></i></a>
-                            <a href="https://www.instagram.com/rizalsetiawan28" target="_blank"><i class='bx bxl-instagram'></i></a>
-                            <a href="https://www.facebook.com/rizalsetiawan55" target="_blank"><i class="bx bxl-facebook"></i></a>
-                            <a href="https://www.linkedin.com/in/rizal-setiawan-b71656172?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank"><i class="bx bxl-linkedin"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- end contact -->
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
         </div>
+
+        <!-- modal certificate -->
+        <div
+          class="modal fade"
+          id="certificate1"
+          tabindex="-1"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">
+                  Details Certificate
+                </h5>
+                <button
+                  type="button"
+                  class="btn-close-certificate"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                >
+                  <i class="fas fa-close"></i>
+                </button>
+              </div>
+              <div class="modal-body">
+                <img src="sertifikat/mos.png" width="100%" height="100%" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="modal fade"
+          id="certificate2"
+          tabindex="-1"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">
+                  Details Certificate
+                </h5>
+                <button
+                  type="button"
+                  class="btn-close-certificate"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                >
+                  <i class="fas fa-close"></i>
+                </button>
+              </div>
+              <div class="modal-body">
+                <img src="sertifikat/database.png" width="100%" height="100%" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="modal fade"
+          id="certificate3"
+          tabindex="-1"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">
+                  Details Certificate
+                </h5>
+                <button
+                  type="button"
+                  class="btn-close-certificate"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                >
+                  <i class="fas fa-close"></i>
+                </button>
+              </div>
+              <div class="modal-body">
+                <img src="sertifikat/magang.png" width="100%" height="100%" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end certificate -->
+
+        <!-- portfolio -->
+        <div class="row mt-4" id="portfolio">
+          <div class="col-12">
+            <div class="text-center text-light text-portfolio">
+              <h3 class="fw-bold">Past Project Experience</h3>
+              <h5>Explore the projects I've worked on so far</h5>
+            </div>
+          </div>
+          <div class="col-12 col-md-4 mt-4">
+            <div class="card-portfolio text-light">
+              <img src="portfolio/bmti.png" width="100%" height="200px" />
+              <div class="text-center fw-bold mt-3">
+                <h5>BMTI Galeri Kejuruan</h5>
+              </div>
+              <p class="" id="text1">
+                The BBPPMV BMTI Vocational Gallery Website Application System
+                consists of developing a system to support...
+              </p>
+              <p class="d-none" id="textt1">
+                The BBPPMV BMTI Vocational Gallery Website Application System
+                consists of developing a system to support the need for
+                centralized learning media as well as a dashboard and homepage
+                that can display existing learning and statistical data which
+                provides complete and comprehensive information regarding
+                learning activities. In order to support the convenience of
+                stackholders in preparing plans for maintenance, development,
+                construction, budgeting and supervision as well as participants
+                and educational staff to make it easier to carry out training
+              </p>
+              <p class="bahasa">Laravel 9, Bootstrap</p>
+              <button
+                class=""
+                data-bs-toggle="modal"
+                onclick="onClickMore1()"
+                id="more1"
+              >
+                See More
+              </button>
+              <button
+                class="d-none"
+                data-bs-toggle="modal"
+                onclick="onClickLess1()"
+                id="less1"
+              >
+                See Less
+              </button>
+              <div class="link-portfolio float-end mt-4">
+                <a
+                  href="https://galeri.kejuruan.id/"
+                  class="text-decoration-none"
+                  target="_blank"
+                >
+                  <svg
+                    stroke="currentColor"
+                    fill="none"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    height="18"
+                    width="18"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                    ></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-4 mt-4">
+            <div class="card-portfolio text-light">
+              <img src="portfolio/kai.png" width="100%" height="200px" />
+              <div class="text-center fw-bold mt-3">
+                <h5>PT Kereta Api Indonesia (PERSERO)</h5>
+              </div>
+              <p class="" id="text2">
+                PT Kereta Api Indonesia or commonly abbreviated as KAI, is an
+                Indonesian state-owned enterprise...
+              </p>
+              <p class="d-none" id="textt2">
+                PT Kereta Api Indonesia or commonly abbreviated as KAI, is an
+                Indonesian state-owned enterprise which operates in the railway
+                sector. Here I had the opportunity to create a Kai dashboard
+                website as a frontend development programmer.
+              </p>
+              <p class="bahasa">Next.Js, TypeScript</p>
+              <button
+                class=""
+                data-bs-toggle="modal"
+                onclick="onClickMore2()"
+                id="more2"
+              >
+                See More
+              </button>
+              <button
+                class="d-none"
+                data-bs-toggle="modal"
+                onclick="onClickLess2()"
+                id="less2"
+              >
+                See Less
+              </button>
+              <div class="link-portfolio float-end mt-4">
+                <a
+                  href="https://mpp.anaheim.co.id/"
+                  class="text-decoration-none"
+                  target="_blank"
+                >
+                  <svg
+                    stroke="currentColor"
+                    fill="none"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    height="18"
+                    width="18"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                    ></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-4 mt-4">
+            <div class="card-portfolio text-light">
+              <img src="portfolio/mjm.png" width="100%" height="200px" />
+              <div class="text-center fw-bold mt-3">
+                <h5>Mursmedic Jaya Mandiri</h5>
+              </div>
+              <p class="" id="text3">
+                The realization of the MJM website application which is used to
+                collect data and diagnosis results from tools...
+              </p>
+              <p class="d-none" id="textt3">
+                The realization of the MJM website application which is used to
+                collect data and diagnosis results from tools that will later be
+                used by doctors as a medium to make it easier to carry out or
+                provide conclusions from the diagnosis results.
+              </p>
+              <p class="bahasa">Django, Python</p>
+              <button
+                class=""
+                data-bs-toggle="modal"
+                onclick="onClickMore3()"
+                id="more3"
+              >
+                See More
+              </button>
+              <button
+                class="d-none"
+                data-bs-toggle="modal"
+                onclick="onClickLess3()"
+                id="less3"
+              >
+                See Less
+              </button>
+              <div class="link-portfolio float-end mt-4">
+                <a
+                  href="http://ecg.anaheim.co.id:7000/"
+                  class="text-decoration-none"
+                  target="_blank"
+                >
+                  <svg
+                    stroke="currentColor"
+                    fill="none"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    height="18"
+                    width="18"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                    ></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-4 mt-4">
+            <div class="card-portfolio text-light">
+              <img src="portfolio/bem.png" width="100%" height="200px" />
+              <div class="text-center fw-bold mt-3">
+                <h5>BEM Universitas Nurtanio Bandung</h5>
+              </div>
+              <p class="" id="text4">
+                The Student Executive Board of the Republic of Nurtanio
+                University Students in Bandung is an intra-campus...
+              </p>
+              <p class="d-none" id="textt4">
+                The Student Executive Board of the Republic of Nurtanio
+                University Students in Bandung is an intra-campus student
+                organization which is an executive institution at the university
+                level. BEM REMA UNNUR is tasked with coordinating all student
+                organizations within the student environment at Nurtanio
+                University Bandung through various work programs. On the other
+                hand, it must carry out its duties as an educational organ and
+                cadre as an effort to maintain organizational stability and
+                create productive spaces for students.
+              </p>
+              <p class="bahasa">Laravel 9, Bootstrap</p>
+              <button
+                class=""
+                data-bs-toggle="modal"
+                onclick="onClickMore4()"
+                id="more4"
+              >
+                See More
+              </button>
+              <button
+                class="d-none"
+                data-bs-toggle="modal"
+                onclick="onClickLess4()"
+                id="less4"
+              >
+                See Less
+              </button>
+              <div class="link-portfolio float-end mt-4">
+                <a
+                  href="https://github.com/rizal2001/bem-unnur.git"
+                  class="text-decoration-none"
+                  target="_blank"
+                >
+                  <svg
+                    stroke="currentColor"
+                    fill="none"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    height="16"
+                    width="16"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+                    ></path>
+                  </svg>
+                </a>
+                <a
+                  href="http://bemremanurtanio.com"
+                  class="text-decoration-none"
+                  target="_blank"
+                  style="margin-left: 5px"
+                >
+                  <svg
+                    stroke="currentColor"
+                    fill="none"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    height="18"
+                    width="18"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                    ></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-4 mt-4">
+            <div class="card-portfolio text-light">
+              <img src="portfolio/srm.png" width="100%" height="200px" />
+              <div class="text-center fw-bold mt-3">
+                <h5>PT. SHIDDIQ SARANA MULYA</h5>
+              </div>
+              <p class="" id="text5">
+                PT. SHIDDIQ SARANA MULYA This is an application project that
+                aims to create a decision support...
+              </p>
+              <p class="d-none" id="textt5">
+                PT. SHIDDIQ SARANA MULYA This is an application project that
+                aims to create a decision support system. Which contains the
+                main page and dashboard along with the menu.
+              </p>
+              <p class="bahasa">Laravel 9, Bootstrap</p>
+              <button
+                class=""
+                data-bs-toggle="modal"
+                onclick="onClickMore5()"
+                id="more5"
+              >
+                See More
+              </button>
+              <button
+                class="d-none"
+                data-bs-toggle="modal"
+                onclick="onClickLess5()"
+                id="less5"
+              >
+                See Less
+              </button>
+              <div class="link-portfolio float-end mt-4">
+                <a
+                  href="https://github.com/syahrizall/sistem-pendukung-keputusan.git"
+                  class="text-decoration-none"
+                  target="_blank"
+                >
+                  <svg
+                    stroke="currentColor"
+                    fill="none"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    height="16"
+                    width="16"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+                    ></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end portfolio -->
+
+        <!-- experience -->
+        <div class="row mt-2" id="experience">
+          <div class="col-12">
+            <div class="text-center text-light text-experience">
+              <h3 class="fw-bold">Work Experience</h3>
+              <h5>My work experience in the company so far</h5>
+            </div>
+          </div>
+          <div class="col-12 col-md-4 mt-4">
+            <div class="card-experience text-light">
+              <div class="text-center fw-bold mt-3">
+                <h5>Anaheim Nimbus Universal</h5>
+              </div>
+              <div class="text-center">
+                <p style="margin-bottom: 5px">Programmer (Apprenticeship)</p>
+                <p class="bahasa">14 Maret 2022 - 14 Maret 2023</p>
+                <hr />
+                <p style="font-size: 12px; margin-top: -5px">
+                  Jalan Ciwaruga no 17 Kec. Parongpong Kab. Bandung Barat 40559
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-4 mt-4">
+            <div class="card-experience text-light">
+              <div class="text-center fw-bold mt-3">
+                <h5>Anaheim Nimbus Universal</h5>
+              </div>
+              <div class="text-center">
+                <p style="margin-bottom: 5px">Programmer (Work)</p>
+                <p class="bahasa">26 September 2023 - Now</p>
+                <hr />
+                <p style="font-size: 12px; margin-top: -5px">
+                  Jalan Ciwaruga no 17 Kec. Parongpong Kab. Bandung Barat 40559
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-4 mt-4">
+            <div class="card-experience text-light">
+              <div class="text-center fw-bold mt-3">
+                <h5>PT. Sigma Cipta Caraka (Telkomsigma)</h5>
+              </div>
+              <div class="text-center">
+                <p style="margin-bottom: 5px">QA Tester (Work)</p>
+                <p class="bahasa">26 September 2023 - 31 Desember 2023</p>
+                <hr />
+                <p style="font-size: 12px; margin-top: -5px">
+                  The Telkom Hub, Telkom Landmark Tower, Jl. Gatot Subroto
+                  No.Kav. 52, RT.6/RW.1, West Kuningan, Mampang Prapatan, South
+                  Jakarta City, Jakarta 12710
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end experience -->
+
+        <!-- contact -->
+        <div class="card content-contact mt-5" id="contact">
+          <div class="row">
+            <div class="col-12 col-lg-4">
+              <div class="sosmed-contact text-center">
+                <h3>Contact Us</h3>
+              </div>
+              <div class="card contactme">
+                <div class="row">
+                  <div class="col-3 text-center mt-1">
+                    <img src="images/gmail.png" width="60px" height="50px" />
+                  </div>
+                  <div class="col-9">
+                    <h1>Gmail</h1>
+                    <p>rizalsetiawan2001@gmail.com</p>
+                    <a
+                      href="mailto:rizalsetiawan2001@gmail.com"
+                      style="text-decoration: none"
+                      target="_blank"
+                    >
+                      <h4>Send Me A Massage</h4>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="card contactme">
+                <div class="row">
+                  <div class="col-3 text-center">
+                    <img src="images/wa.png" width="60px" height="60px" />
+                  </div>
+                  <div class="col-9">
+                    <h1>Whatsapp</h1>
+                    <p>+62 821 3092 4083</p>
+                    <a
+                      href="https://wa.me/+6282130924083?text=Hallo Rizal Setiawan"
+                      style="text-decoration: none"
+                      target="_blank"
+                    >
+                      <h4>Send Me A Massage</h4>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="card contactme">
+                <div class="row">
+                  <div class="col-3 text-center">
+                    <img src="images/telegram.png" width="60px" height="60px" />
+                  </div>
+                  <div class="col-9">
+                    <h1>Telegram</h1>
+                    <p>+62 821 3092 4083</p>
+                    <a
+                      href="https://t.me/+6282130924083?text=Hallo Rizal Setiawan"
+                      style="text-decoration: none"
+                      target="_blank"
+                    >
+                      <h4>Send Me A Massage</h4>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-lg-8 mt-3">
+              <iframe
+                class="rounded"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d787.7892183919205!2d107.50373546949169!3d-6.906749168195211!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e515e1227c61%3A0x8b3d531e08c68440!2sJl.%20Babakan%20Pari%2C%20Batujajar%20Tim.%2C%20Kec.%20Batujajar%2C%20Kabupaten%20Bandung%20Barat%2C%20Jawa%20Barat%2040561!5e1!3m2!1sid!2sid!4v1697889785582!5m2!1sid!2sid"
+                width="100%"
+                height="80%"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+              <div class="sosmed-contact text-center">
+                <a href="mailto:rizalsetiawan2001@gmail.com">
+                  <i class="bx bxl-gmail"></i>
+                </a>
+                <a
+                  href="https://wa.me/+6282130924083?text=Hallo Rizal Setiawan"
+                  target="_blank"
+                >
+                  <i class="bx bxl-whatsapp"></i>
+                </a>
+                <a
+                  href="https://www.instagram.com/rizalsetiawan28"
+                  target="_blank"
+                  ><i class="bx bxl-instagram"></i
+                ></a>
+                <a
+                  href="https://www.facebook.com/rizalsetiawan55"
+                  target="_blank"
+                  ><i class="bx bxl-facebook"></i
+                ></a>
+                <a
+                  href="https://www.linkedin.com/in/rizal-setiawan-b71656172?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+                  target="_blank"
+                  ><i class="bx bxl-linkedin"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end contact -->
+      </div>
     </header>
 
     <footer class="text-center text-light">
-        <p>Design And Developed by <a class="link-footer text-decoration-none" href="https://www.instagram.com/rizalsetiawan28" target="_blank">Rizal Setiawan</a> | Copyright@2023 Portfolio | All Rights Reserved</p>
+      <p>
+        Design And Developed by
+        <a
+          class="link-footer text-decoration-none"
+          href="https://www.instagram.com/rizalsetiawan28"
+          target="_blank"
+          >Rizal Setiawan</a
+        >
+        | Copyright@2023 Portfolio | All Rights Reserved
+      </p>
     </footer>
-</body>
-
+  </body>
 </html>
