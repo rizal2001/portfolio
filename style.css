@@ -822,7 +822,6 @@ button.new-button:checked {
   left: 0;
   width: 100%;
   display: grid;
-  grid-template-row: auto auto;
   gap: 0.5ch;
   background: hsla(0, 0%, 0%, 0.5);
   backdrop-filter: blur(var(--blur));
