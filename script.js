@@ -233,3 +233,43 @@ function onClickLess5() {
   $("#more5").removeClass("d-none");
   $("#less5").addClass("d-none");
 }
+
+function onClickMore6() {
+  $("#text6").addClass("d-none");
+  $("#textt6").removeClass("d-none");
+  $("#more6").addClass("d-none");
+  $("#less6").removeClass("d-none");
+}
+
+function onClickLess6() {
+  $("#text6").removeClass("d-none");
+  $("#textt6").addClass("d-none");
+  $("#more6").removeClass("d-none");
+  $("#less6").addClass("d-none");
+}
+function onClickMore7() {
+  $("#text7").addClass("d-none");
+  $("#textt7").removeClass("d-none");
+  $("#more7").addClass("d-none");
+  $("#less7").removeClass("d-none");
+}
+
+function onClickLess7() {
+  $("#text7").removeClass("d-none");
+  $("#textt7").addClass("d-none");
+  $("#more7").removeClass("d-none");
+  $("#less7").addClass("d-none");
+}
+function onClickMore8() {
+  $("#text8").addClass("d-none");
+  $("#textt8").removeClass("d-none");
+  $("#more8").addClass("d-none");
+  $("#less8").removeClass("d-none");
+}
+
+function onClickLess8() {
+  $("#text8").removeClass("d-none");
+  $("#textt8").addClass("d-none");
+  $("#more8").removeClass("d-none");
+  $("#less8").addClass("d-none");
+}
