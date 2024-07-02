@@ -1208,5 +1208,42 @@ footer .link-footer {
   background-clip: text;
   color: transparent;
 }
-
 /* End Footer */
+#scrollToTopBtn {
+  display: none; /* Hidden by default */
+  position: fixed;
+  bottom: -60px; /* Start off-screen */
+  right: 30px;
+  z-index: 99; /* Make sure it does not overlap */
+  border: none;
+  outline: none;
+  background-color: #000; /* Black background */
+  color: white; /* White text */
+  cursor: pointer; /* Pointer/hand icon */
+  width: 50px; /* Fixed width */
+  height: 50px; /* Fixed height */
+  border-radius: 50%; /* Make it circular */
+  font-size: 18px; /* Increase font size for better visibility */
+  transition: background-color 0.5s; /* Smooth color transition */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.5s, bottom 0.5s;
+  box-shadow: 0 0 20px #6d6d6d;
+}
+
+#scrollToTopBtn.show {
+  display: flex;
+  bottom: 20px; /* Move to visible position */
+  opacity: 1;
+}
+
+#scrollToTopBtn.hide {
+  bottom: -60px; /* Move off-screen */
+  opacity: 0;
+}
+
+#scrollToTopBtn:hover {
+  background-color: #29292998; /* Dark grey background on hover */
+}
