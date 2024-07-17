@@ -58,7 +58,7 @@ $(window).on("scroll", function () {
     $("#scrollExperience").removeClass("active");
     $("#scrollContact").removeClass("active");
   }
-  if ($(window).scrollTop() > 2600) {
+  if ($(window).scrollTop() > 3200) {
     $("#scrollHome").removeClass("active");
     $("#scrollAbout").removeClass("active");
     $("#scrollSkills").removeClass("active");
@@ -67,7 +67,7 @@ $(window).on("scroll", function () {
     $("#scrollExperience").removeClass("active");
     $("#scrollContact").removeClass("active");
   }
-  if ($(window).scrollTop() > 3800) {
+  if ($(window).scrollTop() > 4500) {
     $("#scrollHome").removeClass("active");
     $("#scrollAbout").removeClass("active");
     $("#scrollSkills").removeClass("active");
@@ -76,7 +76,7 @@ $(window).on("scroll", function () {
     $("#scrollExperience").addClass("active");
     $("#scrollContact").removeClass("active");
   }
-  if ($(window).scrollTop() > 4500) {
+  if ($(window).scrollTop() > 5000) {
     $("#scrollHome").removeClass("active");
     $("#scrollAbout").removeClass("active");
     $("#scrollSkills").removeClass("active");
