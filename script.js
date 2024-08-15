@@ -163,113 +163,24 @@ function onClickMicrosoft() {
   $("#btn-skills-4").addClass("btn-skills-active");
 }
 
-// long text content portfolio
-function onClickMore1() {
-  $("#text1").addClass("d-none");
-  $("#textt1").removeClass("d-none");
-  $("#more1").addClass("d-none");
-  $("#less1").removeClass("d-none");
-}
+// Portfolio
+let currentOpenId = null; // Track the currently open card
 
-function onClickLess1() {
-  $("#text1").removeClass("d-none");
-  $("#textt1").addClass("d-none");
-  $("#more1").removeClass("d-none");
-  $("#less1").addClass("d-none");
-}
+function toggleText(id) {
+  if (currentOpenId && currentOpenId !== id) {
+    // Close the currently open card
+    $("#text" + currentOpenId).removeClass("d-none");
+    $("#textt" + currentOpenId).addClass("d-none");
+    $("#more" + currentOpenId).removeClass("d-none");
+    $("#less" + currentOpenId).addClass("d-none");
+  }
 
-function onClickMore2() {
-  $("#text2").addClass("d-none");
-  $("#textt2").removeClass("d-none");
-  $("#more2").addClass("d-none");
-  $("#less2").removeClass("d-none");
-}
+  // Toggle the selected card
+  $("#text" + id).toggleClass("d-none");
+  $("#textt" + id).toggleClass("d-none");
+  $("#more" + id).toggleClass("d-none");
+  $("#less" + id).toggleClass("d-none");
 
-function onClickLess2() {
-  $("#text2").removeClass("d-none");
-  $("#textt2").addClass("d-none");
-  $("#more2").removeClass("d-none");
-  $("#less2").addClass("d-none");
-}
-
-function onClickMore3() {
-  $("#text3").addClass("d-none");
-  $("#textt3").removeClass("d-none");
-  $("#more3").addClass("d-none");
-  $("#less3").removeClass("d-none");
-}
-
-function onClickLess3() {
-  $("#text3").removeClass("d-none");
-  $("#textt3").addClass("d-none");
-  $("#more3").removeClass("d-none");
-  $("#less3").addClass("d-none");
-}
-
-function onClickMore4() {
-  $("#text4").addClass("d-none");
-  $("#textt4").removeClass("d-none");
-  $("#more4").addClass("d-none");
-  $("#less4").removeClass("d-none");
-}
-
-function onClickLess4() {
-  $("#text4").removeClass("d-none");
-  $("#textt4").addClass("d-none");
-  $("#more4").removeClass("d-none");
-  $("#less4").addClass("d-none");
-}
-
-function onClickMore5() {
-  $("#text5").addClass("d-none");
-  $("#textt5").removeClass("d-none");
-  $("#more5").addClass("d-none");
-  $("#less5").removeClass("d-none");
-}
-
-function onClickLess5() {
-  $("#text5").removeClass("d-none");
-  $("#textt5").addClass("d-none");
-  $("#more5").removeClass("d-none");
-  $("#less5").addClass("d-none");
-}
-
-function onClickMore6() {
-  $("#text6").addClass("d-none");
-  $("#textt6").removeClass("d-none");
-  $("#more6").addClass("d-none");
-  $("#less6").removeClass("d-none");
-}
-
-function onClickLess6() {
-  $("#text6").removeClass("d-none");
-  $("#textt6").addClass("d-none");
-  $("#more6").removeClass("d-none");
-  $("#less6").addClass("d-none");
-}
-function onClickMore7() {
-  $("#text7").addClass("d-none");
-  $("#textt7").removeClass("d-none");
-  $("#more7").addClass("d-none");
-  $("#less7").removeClass("d-none");
-}
-
-function onClickLess7() {
-  $("#text7").removeClass("d-none");
-  $("#textt7").addClass("d-none");
-  $("#more7").removeClass("d-none");
-  $("#less7").addClass("d-none");
-}
-function onClickMore8() {
-  $("#text8").addClass("d-none");
-  $("#textt8").removeClass("d-none");
-  $("#more8").addClass("d-none");
-  $("#less8").removeClass("d-none");
-}
-
-function onClickLess8() {
-  $("#text8").removeClass("d-none");
-  $("#textt8").addClass("d-none");
-  $("#more8").removeClass("d-none");
-  $("#less8").addClass("d-none");
+  // Update the currently open card
+  currentOpenId = currentOpenId === id ? null : id;
 }
