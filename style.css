@@ -1224,7 +1224,7 @@ footer .link-footer {
   height: 50px; /* Fixed height */
   border-radius: 50%; /* Make it circular */
   font-size: 18px; /* Increase font size for better visibility */
-  transition: background-color 0.5s; /* Smooth color transition */
+  transition: background-color 0.5s;
   display: flex;
   align-items: center;
   justify-content: center;
