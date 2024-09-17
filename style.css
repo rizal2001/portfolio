@@ -379,7 +379,7 @@ button.new-button:checked {
 .profil {
   box-shadow: 0 0 20px #0ef;
   opacity: 0;
-  animation: slideLeft 1s ease forwards, floatImage 4s ease-in-out infinite;
+  animation: floatImage 4s ease-in-out infinite;
 }
 
 .wave {
