@@ -378,8 +378,7 @@ button.new-button:checked {
 
 .profil {
   box-shadow: 0 0 20px #0ef;
-  opacity: 0;
-  animation: floatImage 4s ease-in-out infinite;
+  animation: slideButtom 1s ease forwards;
 }
 
 .wave {
